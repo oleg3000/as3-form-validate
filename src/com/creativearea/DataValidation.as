@@ -636,7 +636,7 @@ package com.creativearea {
 		}
 
 
-		/** 
+		/**
 		 * Casts a string as a number.  If it fails, returns false.
 		 *
 		 * @param n The String of the number to validate
@@ -644,6 +644,19 @@ package com.creativearea {
 		 */
 		public function isDigit(n:String):Boolean {
 			if (n == "" || n == null || n.length != 1) {
+				return false;
+			}
+			return ! isNaN(parseInt(n));
+		}
+
+		/**
+		 * Casts a string as a number.  If it fails, returns false.
+		 *
+		 * @param n The String of the number to validate
+		 * @return A Boolean true value if the data is valid
+		 */
+		public function isDigits(n:String):Boolean {
+			if (n == "" || n == null) {
 				return false;
 			}
 			return ! isNaN(parseInt(n));

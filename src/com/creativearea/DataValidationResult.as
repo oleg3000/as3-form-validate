@@ -13,6 +13,7 @@ object code form without any attribution requirements.
 
 The name "Adobe Systems Incorporated" must not be used to endorse or promote products
 derived from the source code without prior written permission.
+derived from the source code without prior written permission.
 
 You agree to indemnify, hold harmless and defend Adobe Systems Incorporated from and
 against any loss, damage, claims or lawsuits, including attorney's
