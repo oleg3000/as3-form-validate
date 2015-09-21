@@ -22,7 +22,28 @@ public dynamic class ValidationRule extends  Object{
 		return this;
 	}
 
-	public function addEmail (errorMessage : String) : ValidationRule
+    public function addAlphaNumeric (errorMessage : String) : ValidationRule
+    {
+        this.rules.alphanumeric = true;
+        this.msg.alphanumeric = errorMessage;
+        return this;
+    }
+
+    public function addAlpha (errorMessage : String) : ValidationRule
+    {
+        this.rules.alpha = true;
+        this.msg.alpha = errorMessage;
+        return this;
+    }
+
+    public function addNumeric (errorMessage : String) : ValidationRule
+    {
+        this.rules.numeric = true;
+        this.msg.numeric = errorMessage;
+        return this;
+    }
+
+    public function addEmail (errorMessage : String) : ValidationRule
 	{
 		this.rules.email = true;
 		this.msg.email = errorMessage;

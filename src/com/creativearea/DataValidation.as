@@ -40,12 +40,12 @@ package com.creativearea {
 		/**
 		 *  @private
 		 */
-		private static  var DECIMAL_DIGITS:String = "01234567890";
+		public static  var DECIMAL_DIGITS:String = "01234567890";
 
 		/**
 		 *  @private
 		 */
-		private static  var LC_ROMAN_LETTERS:String = "abcdefghijklmnopqrstuvwxyz";
+		public static  var LC_ROMAN_LETTERS:String = "abcdefghijklmnopqrstuvwxyz";
 
 		/**
 		 * Compare a string against a list of characters to determine if the string does not
