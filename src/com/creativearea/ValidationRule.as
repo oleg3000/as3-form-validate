@@ -2,7 +2,8 @@ package com.creativearea {
 public dynamic class ValidationRule extends  Object{
 
 	private var _validationRules : ValidationRulesBuilder;
-	public var rules : Object = {};
+	public var records : Object = {};
+	public var rules : Array = []
 	public var msg : Object = {};
 
 	public function ValidationRule(validationRules : ValidationRulesBuilder)
@@ -17,56 +18,64 @@ public dynamic class ValidationRule extends  Object{
 
 	public function addRequired (errorMessage : String) : ValidationRule
 	{
-		this.rules.required = true;
+		this.records.required = true;
+		this.rules.push("required");
 		this.msg.required = errorMessage;
 		return this;
 	}
 
     public function addAlphaNumeric (errorMessage : String) : ValidationRule
     {
-        this.rules.alphanumeric = true;
+		this.records.alphanumeric = true;
+        this.rules.push("alphanumeric");
         this.msg.alphanumeric = errorMessage;
         return this;
     }
 
     public function addAlpha (errorMessage : String) : ValidationRule
     {
-        this.rules.alpha = true;
+		this.records.alpha = true;
+        this.rules.push("alpha");
         this.msg.alpha = errorMessage;
         return this;
     }
 
     public function addNumeric (errorMessage : String) : ValidationRule
     {
-        this.rules.numeric = true;
+		this.records.numeric = true;
+        this.rules.push("numeric");
         this.msg.numeric = errorMessage;
         return this;
     }
 
     public function addEmail (errorMessage : String) : ValidationRule
 	{
-		this.rules.email = true;
+		this.records.email = true;
+		this.rules.push("email");
 		this.msg.email = errorMessage;
 		return this;
 	}
 
 	public function addPhone(errorMessage : String) : ValidationRule
 	{
-		this.rules.phone = true;
+		this.records.phone = true;
+		this.rules.push("phone");
 		this.msg.phone = errorMessage;
 		return this;
 	}
 
 	public function addMinLength (value : int, errorMessage : String) : ValidationRule
 	{
-		this.rules.minlength = value;
+		this.records.minlength = value;
+		this.rules.push("minlength");
 		this.msg.minlength = errorMessage;
 		return this;
 	}
 
 	public function addMaxLength (value : int, errorMessage : String) : ValidationRule
 	{
-		this.rules.maxlength = value;
+		this.records.maxlength = value;
+		this.rules.push("maxlength");
 		this.msg.maxlength = errorMessage;
 		return this;
 	}
@@ -74,14 +83,16 @@ public dynamic class ValidationRule extends  Object{
 
 	public function addMinValue (value : int, errorMessage : String) : ValidationRule
 	{
-		this.rules.minvalue = value;
+		this.records.minvalue = value;
+		this.rules.push("minvalue");
 		this.msg.minvalue = errorMessage;
 		return this;
 	}
 
 	public function addMaxValue (value : int, errorMessage : String) : ValidationRule
 	{
-		this.rules.maxvalue = value;
+		this.records.maxvalue = value;
+		this.rules.push("maxvalue");
 		this.msg.maxvalue = errorMessage;
 		return this;
 	}
